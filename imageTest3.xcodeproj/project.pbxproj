@@ -15,6 +15,8 @@
 		EA457DF92515AEFB00EDFBCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA457DF72515AEFB00EDFBCD /* LaunchScreen.storyboard */; };
 		EA457E042515AEFB00EDFBCD /* imageTest3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA457E032515AEFB00EDFBCD /* imageTest3Tests.swift */; };
 		EA457E0F2515AEFB00EDFBCD /* imageTest3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA457E0E2515AEFB00EDFBCD /* imageTest3UITests.swift */; };
+		EA457E242515AF1500EDFBCD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA457E232515AF1500EDFBCD /* Movie.swift */; };
+		EA5E912C25170FF800F9C4BE /* ActorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E912B25170FF800F9C4BE /* ActorsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		EA457E0A2515AEFB00EDFBCD /* imageTest3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imageTest3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA457E0E2515AEFB00EDFBCD /* imageTest3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageTest3UITests.swift; sourceTree = "<group>"; };
 		EA457E102515AEFB00EDFBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA457E232515AF1500EDFBCD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		EA5E912B25170FF800F9C4BE /* ActorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		EA457DEB2515AEF900EDFBCD /* imageTest3 */ = {
 			isa = PBXGroup;
 			children = (
+				EA457E1F2515AF0600EDFBCD /* Model */,
 				EA457DEC2515AEF900EDFBCD /* AppDelegate.swift */,
 				EA457DEE2515AEF900EDFBCD /* SceneDelegate.swift */,
 				EA457DF02515AEF900EDFBCD /* ViewController.swift */,
@@ -106,6 +111,7 @@
 				EA457DF52515AEFB00EDFBCD /* Assets.xcassets */,
 				EA457DF72515AEFB00EDFBCD /* LaunchScreen.storyboard */,
 				EA457DFA2515AEFB00EDFBCD /* Info.plist */,
+				EA5E912B25170FF800F9C4BE /* ActorsViewController.swift */,
 			);
 			path = imageTest3;
 			sourceTree = "<group>";
@@ -126,6 +132,14 @@
 				EA457E102515AEFB00EDFBCD /* Info.plist */,
 			);
 			path = imageTest3UITests;
+			sourceTree = "<group>";
+		};
+		EA457E1F2515AF0600EDFBCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA457E232515AF1500EDFBCD /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5E912C25170FF800F9C4BE /* ActorsViewController.swift in Sources */,
 				EA457DF12515AEF900EDFBCD /* ViewController.swift in Sources */,
 				EA457DED2515AEF900EDFBCD /* AppDelegate.swift in Sources */,
+				EA457E242515AF1500EDFBCD /* Movie.swift in Sources */,
 				EA457DEF2515AEF900EDFBCD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,12 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var label1: UILabel!
+    var movies = [
+        Movie(name: "킹덤", image: "kiki", year: 2019),
+        Movie(name: "쏘우", image: "", year: 2000)
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        label1.text = "i'm kiki"
+        image1.image = UIImage(named: "kiki")
     }
-
-
 }
 
