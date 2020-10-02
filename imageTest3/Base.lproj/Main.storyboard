@@ -50,9 +50,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1nQ-pN-1sl">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <rect key="frame" x="57" y="195" width="300" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtD-Yi-TKQ">
+                                <rect key="frame" x="35" y="513" width="345" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hKp-v4-hO6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -60,11 +67,12 @@
                     <tabBarItem key="tabBarItem" title="Item" id="nTw-bT-ca0"/>
                     <connections>
                         <outlet property="imageController" destination="1nQ-pN-1sl" id="Kue-IO-6gX"/>
+                        <outlet property="urlDescription" destination="VtD-Yi-TKQ" id="gFo-O1-4FG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOd-RV-UNO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341" y="450"/>
+            <point key="canvasLocation" x="1340.5797101449277" y="450"/>
         </scene>
         <!--선택-->
         <scene sceneID="zxU-Ko-BaD">

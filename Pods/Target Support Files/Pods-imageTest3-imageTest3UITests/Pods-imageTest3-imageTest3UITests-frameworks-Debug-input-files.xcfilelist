@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-imageTest3-imageTest3UITests/Pods-imageTest3-imageTest3UITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
+${BUILT_PRODUCTS_DIR}/SwiftLinkPreview/SwiftLinkPreview.framework

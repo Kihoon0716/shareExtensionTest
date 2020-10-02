@@ -6,7 +6,6 @@ target 'imageTest3' do
   use_frameworks!
 
   # Pods for imageTest3
-
 pod 'RealmSwift'
 pod 'SwiftLinkPreview'
 
@@ -27,5 +26,7 @@ target 'myShareExtention' do
   use_frameworks!
 
   # Pods for myShareExtention
+pod 'RealmSwift'
+pod 'SwiftLinkPreview'
 
 end

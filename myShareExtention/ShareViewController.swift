@@ -8,6 +8,13 @@
 import UIKit
 import Social
 import MobileCoreServices
+import RealmSwift
+
+class Bookmark : Object {
+    @objc dynamic var url: String = ""
+    @objc dynamic var desc: String = ""
+}
+
 
 class ShareViewController: SLComposeServiceViewController {
 
@@ -34,6 +41,33 @@ class ShareViewController: SLComposeServiceViewController {
         if let item = extensionContext?.inputItems.first as? NSExtensionItem {
             accessWebpageProperties(extensionItem: item)
         }
+        
+//        let realm = try! Realm()
+        
+        guard var fileURL = FileManager.default
+            .containerURL(forSecurityApplicationGroupIdentifier: "group.imageTest3") else {
+                print("Container URL is nil")
+                return
+        }
+
+        fileURL.appendPathComponent("shared.realm")
+
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(fileURL: fileURL)
+        
+        let realm = try! Realm(fileURL: fileURL)
+        print("\(realm.configuration.fileURL?.absoluteString)")
+        
+        let bookmark = Bookmark()
+        bookmark.desc = "hello"
+        bookmark.url = "apple.com"
+        do{
+            try realm.write{ // realm.write{}는 git에서 commit을 해주는 것과 비슷하다.
+                realm.add(bookmark) // 데이터베이스에 park 모델을 더한다.
+            }
+        } catch {
+            print("Error Add \(error)")
+        }
+        print("add data done")
     }
 
     // To add configuration options via table cells at the bottom of the sheet, return an array of SLComposeSheetConfigurationItem here.
@@ -46,11 +80,12 @@ class ShareViewController: SLComposeServiceViewController {
     }
     
     private func accessWebpageProperties(extensionItem: NSExtensionItem) {
+
+        
+        // url 가져오기
         let propertyList = kUTTypePropertyList as String
-        print("running")
 
         for attachment in extensionItem.attachments! where attachment.hasItemConformingToTypeIdentifier(propertyList) {
-            print("attachments")
             attachment.loadItem(
                 forTypeIdentifier: propertyList,
                 options: nil,
